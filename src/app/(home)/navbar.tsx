@@ -23,7 +23,7 @@ const MenuItems = [
   {
     label: "Pricing",
     href: "/pricing",
-    color: "#FFEDFA",
+    color: "#FDB7EA",
   },
   {
     label: "Resources",
@@ -59,7 +59,7 @@ const Menu = () => {
 
 const Navbar = () => {
   return (
-    <header className="sticky left-0 top-0 w-full dark:bg-gray-900">
+    <header className="w-full dark:bg-gray-900">
       <nav className="mx-auto mt-5 flex min-h-[80px] w-[90%] items-center justify-between rounded-full px-5 transition-all hover:bg-white">
         <div className="flex items-center gap-x-7">
           <div className="flex items-center gap-x-2">

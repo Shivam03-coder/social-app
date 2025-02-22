@@ -16,78 +16,17 @@ import {
   Twitter,
 } from "lucide-react";
 import Navbar from "./navbar";
+import Hero from "./hero";
+import Features from "./features";
 
 function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-white">
       <Navbar />
       {/* Hero Section */}
-      <header className="relative overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 pb-16 pt-20 text-center sm:px-6 lg:px-8">
-          <h1 className="mb-6 text-5xl font-bold text-gray-900 md:text-6xl">
-            Manage Your Social Media
-            <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Like Never Before
-            </span>
-          </h1>
-          <p className="mx-auto mb-8 max-w-2xl text-xl text-gray-600">
-            Schedule, collaborate, and analyze your social media content across
-            all platforms with our powerful management suite.
-          </p>
-          <div className="flex justify-center gap-4">
-            <button className="flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition-colors hover:bg-blue-700">
-              Get Started Free <ArrowRight size={20} />
-            </button>
-            <button className="rounded-full border-2 border-gray-300 px-8 py-4 font-semibold transition-colors hover:border-gray-400">
-              Watch Demo
-            </button>
-          </div>
-        </div>
-
-        {/* Platform Icons */}
-        <div className="mb-20 flex justify-center gap-8">
-          <Facebook
-            size={32}
-            className="text-gray-400 transition-colors hover:text-blue-600"
-          />
-          <Instagram
-            size={32}
-            className="text-gray-400 transition-colors hover:text-pink-600"
-          />
-          <Linkedin
-            size={32}
-            className="text-gray-400 transition-colors hover:text-blue-700"
-          />
-          <Twitter
-            size={32}
-            className="text-gray-400 transition-colors hover:text-blue-400"
-          />
-        </div>
-      </header>
-
+      <Hero />
       {/* Features Grid */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-16 text-center text-3xl font-bold">
-            Powerful Features for Modern Teams
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg transition-shadow hover:shadow-xl"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
-                  {feature.icon}
-                </div>
-                <h3 className="mb-2 text-xl font-semibold">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Features />
 
       {/* Analytics Preview */}
       <section className="bg-gray-50 py-20">
@@ -238,62 +177,5 @@ function HomePage() {
     </div>
   );
 }
-
-const features = [
-  {
-    icon: <Calendar className="text-blue-600" />,
-    title: "Content Calendar",
-    description:
-      "Visual scheduling for posts across multiple social media platforms with intuitive timeline view.",
-  },
-  {
-    icon: <Share2 className="text-blue-600" />,
-    title: "Multi-Platform Support",
-    description:
-      "Seamlessly manage content across Facebook, Instagram, LinkedIn, Twitter, and more.",
-  },
-  {
-    icon: <DragDropIcon className="text-blue-600" />,
-    title: "Drag & Drop Interface",
-    description:
-      "Create and arrange posts effortlessly with our intuitive drag and drop interface.",
-  },
-  {
-    icon: <Eye className="text-blue-600" />,
-    title: "Post Previews",
-    description:
-      "Preview exactly how your posts will look before publishing to any platform.",
-  },
-  {
-    icon: <CheckSquare className="text-blue-600" />,
-    title: "HomePageroval Workflows",
-    description:
-      "Set up structured HomePageroval processes to ensure quality control across your team.",
-  },
-  {
-    icon: <Clock className="text-blue-600" />,
-    title: "Auto-Publishing",
-    description:
-      "Schedule posts to automatically publish at optimal times for maximum engagement.",
-  },
-  {
-    icon: <Users className="text-blue-600" />,
-    title: "User Roles & Permissions",
-    description:
-      "Manage access levels for team members and clients with granular controls.",
-  },
-  {
-    icon: <ImageIcon className="text-blue-600" />,
-    title: "Media Library",
-    description:
-      "Centralized storage for all your media assets with easy organization and access.",
-  },
-  {
-    icon: <BarChart3 className="text-blue-600" />,
-    title: "Analytics & Reports",
-    description:
-      "Comprehensive analytics and reporting to track and improve your social media performance.",
-  },
-];
 
 export default HomePage;
