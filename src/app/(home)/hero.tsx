@@ -9,6 +9,7 @@ import {
   Users,
   BarChart,
 } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -53,13 +54,15 @@ const Hero = () => {
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <button className="group flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-300 via-black to-purple-300 px-8 py-4 font-semibold text-white transition-all hover:scale-105 sm:w-auto">
-                Start Free Trial
-                <ArrowRight
-                  size={20}
-                  className="transition-transform group-hover:translate-x-1"
-                />
-              </button>
+              <Link href={"/user-dashboard"}>
+                <button className="group flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-300 via-black to-purple-300 px-8 py-4 font-semibold text-white transition-all hover:scale-105 sm:w-auto">
+                  Start Free Trial
+                  <ArrowRight
+                    size={20}
+                    className="transition-transform group-hover:translate-x-1"
+                  />
+                </button>
+              </Link>
               <button className="group flex w-full items-center justify-center gap-2 rounded-full border-2 border-gray-200 px-8 py-4 font-semibold text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50 sm:w-auto">
                 <BarChart size={20} />
                 See Live Demo
