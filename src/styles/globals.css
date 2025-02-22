@@ -16,40 +16,11 @@
     font-family: var(--font-inter), sans-serif;
     height: 100vh;
     width: 100%;
-    @apply text-base font-inter;
+    @apply font-inter text-base;
   }
 
   html {
     --font-inter: "Inter", sans-serif;
-  }
-
-  :root {
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  :root {
-    --color-primary: #040d12;
-    --color-secondary: #f2f8ff;
-    --color-main: #3b82f6;
-    --color-dark: #1f1f23;
   }
 
   h1 {
@@ -100,39 +71,3 @@
   }
 }
 
-.cl-internal-1dauvpw,
-.cl-userButtonPopoverFooter {
-  display: none;
-}
-
-.cl-userButtonPopoverCard {
-  background-color: var(--color-secondary);
-}
-
-.cl-button {
-  background-color: var(--color-main);
-  color: black;
-  outline: none;
-  border: none;
-  text-transform: uppercase;
-}
-
-.cl-internal-1pr5xvn {
-  text-transform: uppercase;
-  color: var(--color-main);
-}
-
-.cl-rootBox {
-  @apply rounded-xl border-2 border-blue-500;
-}
-
-
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
