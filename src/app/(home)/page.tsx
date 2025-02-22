@@ -20,6 +20,7 @@ import Hero from "./hero";
 import Features from "./features";
 import TestimonialCarousel from "./testimonial";
 import Analytic from "./analytic";
+import Cta from "./cta";
 
 function HomePage() {
   return (
@@ -34,24 +35,9 @@ function HomePage() {
 
       {/* Analytics Preview */}
       <Analytic />
-      
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20 text-white">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="mb-6 text-4xl font-bold">
-            Ready to Transform Your Social Media Strategy?
-          </h2>
-          <p className="mb-8 text-xl opacity-90">
-            Join thousands of teams already using our platform to streamline
-            their social media management.
-          </p>
-          <button className="rounded-full bg-white px-8 py-4 font-semibold text-blue-600 transition-colors hover:bg-gray-100">
-            Start Your Free Trial
-          </button>
-        </div>
-      </section>
-
+      <Cta />
       {/* Footer */}
       <footer className="bg-gray-900 py-12 text-gray-400">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

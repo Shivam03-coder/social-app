@@ -7,7 +7,7 @@
   *::before,
   *::after {
     box-sizing: border-box;
-    user-select: none !important;;
+    user-select: none !important;
   }
 
   html,

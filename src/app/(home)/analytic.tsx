@@ -24,7 +24,7 @@ const Analytic = () => {
               ].map(([label, color], index) => (
                 <span
                   key={index}
-                  className={`flex max-w-[350px] items-center gap-3 rounded-xl ${color} p-2`}
+                  className={`flex max-w-[350px] items-center gap-3 rounded-xl ${color} p-3`}
                 >
                   <div className="flex h-6 w-6 items-center justify-center rounded-full bg-green-100">
                     <CheckSquare size={16} className="text-green-600" />
