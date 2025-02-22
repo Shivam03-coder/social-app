@@ -18,6 +18,8 @@ import {
 import Navbar from "./navbar";
 import Hero from "./hero";
 import Features from "./features";
+import TestimonialCarousel from "./testimonial";
+import Analytic from "./analytic";
 
 function HomePage() {
   return (
@@ -27,46 +29,12 @@ function HomePage() {
       <Hero />
       {/* Features Grid */}
       <Features />
+      {/* User Reviews Carousel */}
+      <TestimonialCarousel />
 
       {/* Analytics Preview */}
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center gap-12 lg:flex-row">
-            <div className="lg:w-1/2">
-              <h2 className="mb-6 text-4xl font-bold">
-                Track Your Success with Advanced Analytics
-              </h2>
-              <p className="mb-8 text-lg text-gray-600">
-                Get detailed insights into your social media performance.
-                Monitor engagement, reach, and growth across all platforms in
-                one unified dashboard.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Real-time performance metrics",
-                  "Custom report generation",
-                  "Audience insights",
-                  "Engagement analytics",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-green-100">
-                      <CheckSquare size={16} className="text-green-600" />
-                    </div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="lg:w-1/2">
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-                alt="Analytics Dashboard"
-                className="rounded-lg shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Analytic />
+      
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20 text-white">
