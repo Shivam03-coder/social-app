@@ -54,7 +54,7 @@ const Hero = () => {
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Link href={"/user-dashboard"}>
+              <Link href={"/teams/234893741937412969124"}>
                 <button className="group flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-300 via-black to-purple-300 px-8 py-4 font-semibold text-white transition-all hover:scale-105 sm:w-auto">
                   Start Free Trial
                   <ArrowRight
