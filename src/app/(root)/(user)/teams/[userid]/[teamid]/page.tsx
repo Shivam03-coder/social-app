@@ -1,10 +1,15 @@
 import React from "react";
 
-const UserdashboardPage = () => {
+interface UserdashboardProps {
+  params: { userid: string };
+}
+
+const Userdashboard = ({ params }: UserdashboardProps) => {
+  const userId = params.userid;
   return (
     <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
       <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-        <div className="bg-red-100 aspect-video rounded-xl" />
+        <div className="aspect-video rounded-xl bg-red-100" />
         <div className="bg-muted/50 aspect-video rounded-xl" />
         <div className="bg-muted/50 aspect-video rounded-xl" />
       </div>
@@ -13,4 +18,4 @@ const UserdashboardPage = () => {
   );
 };
 
-export default UserdashboardPage;
+export default Userdashboard;

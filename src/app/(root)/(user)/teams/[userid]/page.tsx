@@ -117,9 +117,7 @@ const TeamsPage: React.FC = () => {
 
           {/* Team Cards */}
           {teams.map((team) => (
-           <>
             <TeamCard key={team.id} {...team} />
-           </>
           ))}
         </div>
 
