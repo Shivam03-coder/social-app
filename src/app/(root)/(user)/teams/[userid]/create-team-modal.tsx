@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter } from "@/components/ui/sheet";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -30,13 +30,14 @@ const CreateTeamModal: React.FC<CreateTeamModalProps> = ({ isOpen, onClose, onSu
   };
 
   return (
-    <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent side="right" className="w-[400px] bg-white rounded-l-xl">
-        <SheetHeader>
-          <SheetTitle>Create New Team</SheetTitle>
-        </SheetHeader>
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-md rounded-lg bg-white">
+        <DialogHeader>
+          <DialogTitle className="text-lg font-semibold">Create New Team</DialogTitle>
+        </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Team Name */}
           <div>
             <label className="block text-sm font-medium text-gray-700">Team Name</label>
             <Input
@@ -47,6 +48,7 @@ const CreateTeamModal: React.FC<CreateTeamModalProps> = ({ isOpen, onClose, onSu
             />
           </div>
 
+          {/* Team Image */}
           <div>
             <label className="block text-sm font-medium text-gray-700">Team Image URL</label>
             <div className="flex gap-2">
@@ -62,6 +64,7 @@ const CreateTeamModal: React.FC<CreateTeamModalProps> = ({ isOpen, onClose, onSu
             </div>
           </div>
 
+          {/* Invite Members */}
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Invite Team Members (comma-separated emails)
@@ -74,17 +77,18 @@ const CreateTeamModal: React.FC<CreateTeamModalProps> = ({ isOpen, onClose, onSu
             />
           </div>
 
-          <SheetFooter className="flex justify-end space-x-2 mt-4">
+          {/* Footer Buttons */}
+          <DialogFooter className="flex justify-end space-x-2 mt-4">
             <Button type="button" variant="outline" onClick={onClose}>
               <X size={20} /> Cancel
             </Button>
             <Button type="submit" className="bg-blue-600 text-white hover:bg-blue-700">
               <Send size={20} /> Create Team & Send Invites
             </Button>
-          </SheetFooter>
+          </DialogFooter>
         </form>
-      </SheetContent>
-    </Sheet>
+      </DialogContent>
+    </Dialog>
   );
 };
 

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Plus, Users, Sparkles, ArrowRight } from "lucide-react";
 import CreateTeamModal from "./create-team-modal";
 import TeamCard from "./team-card";
+import Header from "./header";
 
 const mockTeams = [
   {
@@ -75,20 +76,9 @@ const TeamsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-        {/* Header Section */}
-        <div className="mb-12 bg-purple-200 p-6 rounded-b-md lg:rounded-b-full text-center">
-          <div className="mb-4 flex items-center justify-center gap-3">
-            <Sparkles className="h-8 w-8 text-purple-600" />
-            <h1 className="bg-gradient-to-r from-blue-600 to-gray-900 bg-clip-text text-4xl font-bold text-transparent">
-              SOCIAL-X
-            </h1>
-          </div>
-          <p className="mx-auto font-lexend max-w-2xl text-gray-900">
-            Collaborate, create, and achieve together. Join or create a team to
-            start your journey towards building something amazing with talented
-            individuals.
-          </p>
-        </div>
+      {/* Header Section */}
+      <Header />
+
       <div className="mx-auto max-w-7xl">
         {/* Teams Grid */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

@@ -36,7 +36,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
       <Card
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="group relative overflow-hidden rounded-[30px] border-none bg-pink-100 shadow-lg transition-all duration-300 hover:-translate-y-2"
+        className="group relative overflow-hidden min-h-[300px] rounded-[30px] border-none bg-pink-100 shadow-lg transition-all duration-300 hover:-translate-y-2"
       >
         {/* Team Logo */}
         <div className="h-32 overflow-hidden">
