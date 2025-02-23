@@ -5,7 +5,7 @@ import CreateTeamModal from "./create-team-modal";
 import TeamCard from "./team-card";
 import Header from "./header";
 
-const mockTeams = [
+export const mockTeams = [
   {
     id: "1",
     name: "Design Team",
