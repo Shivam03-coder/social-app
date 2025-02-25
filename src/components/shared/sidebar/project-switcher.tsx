@@ -67,7 +67,7 @@ export const mockTeams = [
   },
 ];
 
-export function TeamSwitcher() {
+export function ProjectSwitcher() {
   const { isMobile } = useSidebar();
   const [activeTeam, setActiveTeam] = React.useState(mockTeams[0]);
 
