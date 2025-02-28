@@ -7,7 +7,7 @@ export default function WelcomePost() {
   const [hover, setHover] = useState(false);
 
   return (
-    <div className="mx-auto w-full bg-white  p-4">
+    <div className="mx-auto  w-full bg-white  p-4">
       <div
         className="relative w-full overflow-hidden rounded-lg bg-gray-100"
         onMouseEnter={() => setHover(true)}

@@ -24,7 +24,13 @@ import {
 } from "@/components/ui/popover";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { toast } from "sonner";
-import { CalendarIcon, CalendarRange, ChevronDown, CircleChevronDown } from "lucide-react";
+import {
+  CalendarIcon,
+  CalendarRange,
+  CalendarRangeIcon,
+  ChevronDown,
+  CircleChevronDown,
+} from "lucide-react";
 
 const FormSchema = z.object({
   time: z.date({}),
@@ -76,8 +82,8 @@ function DateTimePicker() {
             <FormItem className="flex flex-col">
               <Popover>
                 <PopoverTrigger>
-                  <span className="flex text-sm items-center gap-x-2">
-                    Select date and time <ChevronDown />
+                  <span className="flex items-center gap-x-2 text-sm">
+                    <CalendarRangeIcon />
                   </span>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto bg-white p-0">

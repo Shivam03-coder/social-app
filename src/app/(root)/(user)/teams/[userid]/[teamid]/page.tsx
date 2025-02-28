@@ -14,7 +14,7 @@ const Postpage = () => {
           <div className="w-full max-w-[3.75rem]">
             <PostInfo />
           </div>
-          <div className="max-w-[30.275rem]">
+          <div className="max-w-[30.275rem] h-full">
             <PostCreation />
           </div>
           <div className="w-full max-w-[27.5rem]">

@@ -6,13 +6,18 @@ import React, { FC } from "react";
 interface PostheaderProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
+  removeIcon?: boolean;
 }
-const Postheader: FC<PostheaderProps> = ({ setIsOpen, isOpen }) => {
+const Postheader: FC<PostheaderProps> = ({
+  setIsOpen,
+  isOpen,
+  removeIcon = false,
+}) => {
   return (
     <div className="flex justify-between bg-white p-3">
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-3 cursor-pointer"
+        className="CURSOP flex items-center gap-3"
       >
         <div className="center h-10 w-10 rounded-full bg-gray-300 text-gray-800">
           SA
@@ -26,11 +31,13 @@ const Postheader: FC<PostheaderProps> = ({ setIsOpen, isOpen }) => {
       <p className="flex items-center pl-2 text-sm text-gray-500">
         <DateTimePicker />
       </p>
-      <div className="flex items-center gap-2">
-        <button className="text-gray-500 hover:text-gray-700">
-          <MoreHorizontal size={18} />
-        </button>
-      </div>
+      {removeIcon ?? (
+        <div className="flex items-center gap-2">
+          <button className="text-gray-500 hover:text-gray-700">
+            <MoreHorizontal size={18} />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
