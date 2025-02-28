@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { MoreHorizontal, Trash, Edit } from "lucide-react";
+import { MoreHorizontal, Trash, Edit, GalleryHorizontal } from "lucide-react";
 import Image from "next/image";
 
 export default function WelcomePost() {
@@ -16,6 +16,9 @@ export default function WelcomePost() {
         <Image src="/image.png" alt="Welcome" height={600} width={500} />
         {hover && (
           <div className="absolute transition-all duration-300 inset-0 flex items-start justify-end gap-2 bg-black bg-opacity-50 p-2">
+            <button className="rounded bg-gray-700 p-1 text-white hover:bg-gray-600">
+              <GalleryHorizontal size={18} />
+            </button>
             <button className="rounded bg-gray-700 p-1 text-white hover:bg-gray-600">
               <Edit size={18} />
             </button>

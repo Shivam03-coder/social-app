@@ -4,7 +4,7 @@ import WelcomePost from "./welcome-post";
 
 const MobileView = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
+    <div className="flex min-h-screen items-center justify-center rounded-md bg-gray-100">
       {/* Android Frame */}
       <div className="relative h-[680px] w-[360px] overflow-hidden rounded-3xl border-8 border-gray-700 bg-black shadow-lg">
         {/* Status Bar */}

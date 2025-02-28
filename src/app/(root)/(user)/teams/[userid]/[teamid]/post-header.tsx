@@ -8,35 +8,33 @@ interface PostheaderProps {
   setIsOpen: (isOpen: boolean) => void;
   removeIcon?: boolean;
 }
-const Postheader: FC<PostheaderProps> = ({
-  setIsOpen,
-  isOpen,
-  removeIcon = false,
-}) => {
+
+const Postheader: FC<PostheaderProps> = ({ setIsOpen, isOpen, removeIcon = false }) => {
   return (
-    <div className="flex justify-between bg-white p-3">
+    <div className="flex justify-between bg-white p-3 items-center">
+      {/* Left Side: Profile & Email */}
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="CURSOP flex items-center gap-3"
+        className="cursor-pointer flex items-center gap-3"
       >
-        <div className="center h-10 w-10 rounded-full bg-gray-300 text-gray-800">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-300 text-gray-800">
           SA
         </div>
-        <div className="flex items-center">
-          <p className="font-lexend text-sm font-normal text-gray-800">
-            shivam850anand@gmail.com
-          </p>
-        </div>
+        <p className="font-lexend text-sm font-normal text-gray-800">
+          shivam850anand@gmail.com
+        </p>
       </div>
-      <p className="flex items-center pl-2 text-sm text-gray-500">
+
+      {/* Center: Date Picker */}
+      <div className="text-sm text-gray-500">
         <DateTimePicker />
-      </p>
-      {removeIcon ?? (
-        <div className="flex items-center gap-2">
-          <button className="text-gray-500 hover:text-gray-700">
-            <MoreHorizontal size={18} />
-          </button>
-        </div>
+      </div>
+
+      {/* Right Side: Icons */}
+      {!removeIcon && (
+        <button className="text-gray-500 hover:text-gray-700">
+          <MoreHorizontal size={18} />
+        </button>
       )}
     </div>
   );
