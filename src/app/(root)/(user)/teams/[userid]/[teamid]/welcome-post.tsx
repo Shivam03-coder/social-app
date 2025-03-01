@@ -2,12 +2,13 @@
 import { useState } from "react";
 import { MoreHorizontal, Trash, Edit, GalleryHorizontal } from "lucide-react";
 import Image from "next/image";
+import PostEditSheet from "./post-edit-sheet";
 
 export default function WelcomePost() {
   const [hover, setHover] = useState(false);
 
   return (
-    <div className="mx-auto  w-full bg-white  p-4">
+    <div className="mx-auto w-full bg-white p-4">
       <div
         className="relative w-full overflow-hidden rounded-lg bg-gray-100"
         onMouseEnter={() => setHover(true)}
@@ -15,13 +16,11 @@ export default function WelcomePost() {
       >
         <Image src="/image.png" alt="Welcome" height={600} width={500} />
         {hover && (
-          <div className="absolute transition-all duration-300 inset-0 flex items-start justify-end gap-2 bg-black bg-opacity-50 p-2">
+          <div className="absolute inset-0 flex items-start justify-end gap-2 bg-black bg-opacity-50 p-2 transition-all duration-300">
             <button className="rounded bg-gray-700 p-1 text-white hover:bg-gray-600">
               <GalleryHorizontal size={18} />
             </button>
-            <button className="rounded bg-gray-700 p-1 text-white hover:bg-gray-600">
-              <Edit size={18} />
-            </button>
+            <PostEditSheet />
             <button className="rounded bg-red-600 p-1 text-white hover:bg-red-500">
               <Trash size={18} />
             </button>
