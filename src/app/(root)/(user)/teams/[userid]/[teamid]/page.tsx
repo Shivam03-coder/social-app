@@ -1,9 +1,9 @@
 import React from "react";
-import Stories from "./stories";
-import PostInfo from "./post-info";
-import TeamComment from "./team-comment";
-import PostCreation from "./post-creation";
-import CommentCreation from "./comment-creation";
+import Stories from "./_components/stories";
+import PostInfo from "./_components/post-info";
+import TeamComment from "./_components/team-comment";
+import PostCreation from "./_components/post-creation";
+import CommentCreation from "./_components/comment-creation";
 
 const Postpage = () => {
   return (

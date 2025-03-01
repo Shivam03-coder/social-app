@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import { Plus, Users, Sparkles, ArrowRight } from "lucide-react";
-import CreateTeamModal from "./create-team-modal";
+import CreateTeamModal from "./[teamid]/_components/create-team-modal";
 import TeamCard from "./team-card";
-import Header from "./header";
+import Header from "./[teamid]/_components/header";
 
 export const mockTeams = [
   {

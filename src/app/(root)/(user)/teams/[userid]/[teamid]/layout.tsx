@@ -13,7 +13,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import Dashboardheader from "./dashboard-header";
+import Dashboardheader from "./_components/dashboard-header";
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <SidebarProvider>
