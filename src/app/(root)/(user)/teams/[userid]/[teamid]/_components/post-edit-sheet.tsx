@@ -10,13 +10,16 @@ import { Edit } from "lucide-react";
 
 const PostEditSheet = () => {
   return (
-    <Sheet>
-      <SheetTrigger>
+    <Sheet >
+      <SheetTrigger asChild>
         <button className="rounded bg-gray-700 p-1 text-white hover:bg-gray-600">
           <Edit size={18} />
         </button>
       </SheetTrigger>
-      <SheetContent side={"bottom"} className="bg-white h-[600px]">
+      <SheetContent
+        side={"right"}
+        className="my-auto mr-5 h-[97%] w-[400px] rounded-3xl bg-white p-4"
+      >
         <SheetHeader>
           <SheetTitle>Are you absolutely sure?</SheetTitle>
           <SheetDescription>

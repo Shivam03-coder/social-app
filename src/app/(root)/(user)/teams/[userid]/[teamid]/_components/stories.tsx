@@ -8,13 +8,13 @@ const Stories = () => {
 
   return (
     <section className="mt-5 flex flex-col rounded-md p-6 transition-all hover:border hover:bg-white">
-      <div className="flex w-full justify-between">
-        <h5 className="font-lexend text-lg font-normal">Stories(0)</h5>
+      <div className="flex w-full justify-between"> 
+        <h5 className="font-lexend text-sm font-normal">Stories(0)</h5>
         <button onClick={() => setOpen(!open)}>
           {open ? (
-            <Minus className={`transition-transform duration-300`} />
+            <Minus size={19} className={`transition-transform duration-300`} />
           ) : (
-            <Plus className={`transition-transform duration-300`} />
+            <Plus size={19} className={`transition-transform duration-300`} />
           )}
         </button>
       </div>
@@ -25,7 +25,7 @@ const Stories = () => {
         } rounded-md bg-white`}
       >
         <div className="p-4">
-          <StoryCard />
+          <StoryCard  />
         </div>
       </div>
     </section>

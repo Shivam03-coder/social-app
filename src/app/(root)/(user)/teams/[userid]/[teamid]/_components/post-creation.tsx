@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Postheader from "./post-header";
 import WelcomePost from "./welcome-post";
-import PostEditDialog from "./post-edit.dialog";
+import PostViewDialog from "./post-view.dialog";
 
 const PostCreation = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -10,7 +10,7 @@ const PostCreation = () => {
     <div className="h-full">
       <Postheader isOpen={isOpen} setIsOpen={setIsOpen} />
       <WelcomePost />
-      <PostEditDialog isOpen={isOpen} setIsOpen={setIsOpen} />
+      <PostViewDialog isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 };

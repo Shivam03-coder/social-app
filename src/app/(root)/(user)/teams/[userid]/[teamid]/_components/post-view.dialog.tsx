@@ -22,20 +22,20 @@ interface PostEditDialogProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }
-const PostEditDialog: FC<PostEditDialogProps> = ({ isOpen, setIsOpen }) => {
+const PostViewDialog: FC<PostEditDialogProps> = ({ isOpen, setIsOpen }) => {
   return (
     <Dialog open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
       <DialogContent className="h-full flex flex-col max-w-[97%] overflow-y-scroll bg-white">
-        <PostEditDialogheader />
+        <PostViewDialogheader />
         <PostViewTabs />
       </DialogContent>
     </Dialog>
   );
 };
 
-export default PostEditDialog;
+export default PostViewDialog;
 
-const PostEditDialogheader = () => {
+const PostViewDialogheader = () => {
   return (
     <DialogHeader>
       <DialogTitle className="hidden">POST EDITIOR</DialogTitle>
