@@ -17,6 +17,9 @@ importers:
       '@hookform/resolvers':
         specifier: ^4.1.0
         version: 4.1.0(react-hook-form@7.54.2(react@18.3.1))
+      '@pqina/pintura':
+        specifier: ^8.92.4
+        version: 8.92.4
       '@radix-ui/react-accordion':
         specifier: ^1.2.3
         version: 1.2.3(@types/react-dom@18.3.5(@types/react@18.3.17))(@types/react@18.3.17)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -526,6 +529,9 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@pqina/pintura@8.92.4':
+    resolution: {integrity: sha512-E2/h/pbvrNy7nPD0YYci1y1kiGqPB6URTactN2mHYx6mzuFCQa+v12oR41tcqAxmJgIVKNIOqtOEXnMKahhpKg==}
 
   '@radix-ui/number@1.1.0':
     resolution: {integrity: sha512-V3gRzhVNU1ldS5XhAPTom1fOIo4ccrjjJgmE+LI2h/WaFpHmx0MQApT+KZHnx8abG6Avtfcz4WoEciMnpFT3HQ==}
@@ -3602,6 +3608,8 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
+
+  '@pqina/pintura@8.92.4': {}
 
   '@radix-ui/number@1.1.0': {}
 
